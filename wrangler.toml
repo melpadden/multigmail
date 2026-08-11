@@ -1,0 +1,27 @@
+name = "multigmail"
+main = "src/index.ts"
+compatibility_date = "2025-03-10"
+compatibility_flags = ["nodejs_compat"]
+
+[[kv_namespaces]]
+binding = "OAUTH_KV"
+id = "00000000000000000000000000000000"
+preview_id = "00000000000000000000000000000001"
+
+[[kv_namespaces]]
+binding = "TOKEN_STORE"
+id = "00000000000000000000000000000002"
+preview_id = "00000000000000000000000000000003"
+
+[durable_objects]
+bindings = [
+  { name = "MCP_OBJECT", class_name = "WorkspaceMCP" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["WorkspaceMCP"]
+
+# Set secrets with: wrangler secret put <NAME>
+# GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, COOKIE_ENCRYPTION_KEY, WORKER_URL
+# Optional: HOSTED_DOMAIN

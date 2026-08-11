@@ -1,0 +1,7 @@
+GOOGLE_CLIENT_ID=your-google-oauth-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-google-oauth-client-secret
+COOKIE_ENCRYPTION_KEY=generate-a-long-random-string
+# Optional public URL used in add_account links (defaults to request origin)
+WORKER_URL=http://localhost:8787
+# Optional: restrict Google login to a Workspace domain
+# HOSTED_DOMAIN=example.com
